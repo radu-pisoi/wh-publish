@@ -34,4 +34,15 @@ jobs:
       - name: Unzip
         run:           
           unzip oxygen-publishing-engine-3.x-25.0-SNAPSHOT-package-full.zip
+          
+      # List files
+      - name: Unzip
+        run:           
+          ls -la
+      
+      # Run DITA command
+      - name: Unzip
+        run:           
+          ls -la
+          
       
