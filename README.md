@@ -1,3 +1,0 @@
-# wh-publish
-
-test project
