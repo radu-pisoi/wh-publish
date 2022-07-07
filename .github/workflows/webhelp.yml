@@ -25,8 +25,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a set of commands using the runners shell
+      # Download OPE
       - name: Download OPE
-        run: |
+        run: 
           wget http://mirror.oxygenxml.com/maven-nightly/com/oxygenxml/oxygen-publishing-engine-3.x/25.0-SNAPSHOT/oxygen-publishing-engine-3.x-25.0-SNAPSHOT-package-full.zip
+      
+      # Unzip OPE
+      - name: Download OPE
+        run:           
           tar -xvzf oxygen-publishing-engine-3.x-25.0-SNAPSHOT-package-full.zip
+      
