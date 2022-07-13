@@ -48,6 +48,6 @@ jobs:
           
       - name: Write file
         run: |
-          echo "$MULTI_LINE"
-          echo "$MULTI_LINE" > license.txt
+          echo $MULTI_LINE
+          echo $MULTI_LINE > license.txt
           cat license.txt
