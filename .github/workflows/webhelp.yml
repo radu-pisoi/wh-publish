@@ -50,6 +50,6 @@ jobs:
         env:
           LICENSE: ${{ secrets.MULTI_LINE }}
         run: |
-          echo $LICENSE
-          echo $LICENSE > license.txt
+          echo "$LICENSE"
+          echo "$LICENSE" > "license.txt"
           cat license.txt
