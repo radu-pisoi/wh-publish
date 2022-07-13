@@ -47,7 +47,9 @@ jobs:
       #    sh oxygen-publishing-engine-3.x/bin/dita --input=flowers/flowers.ditamap --format=webhelp-responsive 
           
       - name: Write file
+        env:
+          LICENSE: ${{ secrets.MULTI_LINE }}
         run: |
-          echo $MULTI_LINE
-          echo $MULTI_LINE > license.txt
+          echo $LICENSE
+          echo $LICENSE > license.txt
           cat license.txt
