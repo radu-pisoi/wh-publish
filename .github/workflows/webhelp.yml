@@ -21,36 +21,12 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - uses: actions/checkout@v3
-      #   with:
-      #    ref: 'doc'
-      # Download OPE
-      # - name: Download OPE
-      #  run: 
-      #    wget http://mirror.oxygenxml.com/maven-nightly/com/oxygenxml/oxygen-publishing-engine-3.x/25.0-SNAPSHOT/oxygen-publishing-engine-3.x-25.0-SNAPSHOT-package-full.zip
-
-      # Unzip OPE
-      # - name: Unzip
-      #  run: 
-      #    unzip oxygen-publishing-engine-3.x-25.0-SNAPSHOT-package-full.zip
-          
-      # List files
-      # - name: List files
-      #  run:           
-      #    ls -la
-      
-      # Run DITA command
-      # - name: Run DITA-OT command
-      #  run:           
-      #    sh oxygen-publishing-engine-3.x/bin/dita --input=flowers/flowers.ditamap --format=webhelp-responsive 
-          
+    steps:         
       - name: Write file
         env:
           LICENSE: ${{ secrets.MULTI_LINE }}
         run: |
           echo ${{ secrets.MULTI_LINE }}
-          echo ${{ secrets.MULTI_LINE }} > "license.txt"
+          echo ${{ secrets.MULTI_LINE }} > license.txt
           cat license.txt
           ls
